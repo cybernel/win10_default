@@ -1,0 +1,3 @@
+Invoke-WebRequest -Uri https://d32a6ru7mhaq0c.cloudfront.net/Zscaler-windows-1.5.2.7-installer.exe -Outfile 'c:\Users\IEUser\Downloads\Zscaler-windows-1.5.2.7-installer.exe'
+Invoke-WebRequest -Uri https://d32a6ru7mhaq0c.cloudfront.net/Zscaler-windows-1.5.2.7-installer.msi -Outfile 'c:\Users\IEUser\Downloads\Zscaler-windows-1.5.2.7-installer.msi'
+c:\Users\IEUser\Downloads\Zscaler-windows-1.5.2.7-installer.exe --mode unattended --unattendedmodeui none

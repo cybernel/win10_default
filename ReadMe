@@ -1,0 +1,23 @@
+ReadMe
+
+This vagrantfile assumes you have downloaded/installed:
+- Vagrant, at least v2 or higher
+- VirtualBox
+- Windows 10 VM from the below link
+
+This Vagrantfile makes use of the 90-day eval image from this URL
+https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+
+The specific VM used is MSEdge on Windows 10 Stable 1809
+https://az792536.vo.msecnd.net/vms/VMBuild_20190311/VirtualBox/MSEdge/MSEdge.Win10.VirtualBox.zip
+
+(Source https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
+
+Download the file "MSEdge.Win10.Vagrant.zip"
+
+unzip the file to reveal .box image "MSEdge - Win10.box". The .box file is an archive, do not unpack it.
+
+Run the following command to add the .box image to your Vagrant repo
+vagrant box add "./MSEdge - Win10.box" --name Win10
+
+run "vagrant up" to launch
