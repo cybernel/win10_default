@@ -59,6 +59,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "pstools", type: "shell" do |s|
   s.inline = 'write-host "================ Installing pstools ================" ; c:\vagrant\pstools.ps1'
   end
+	
+  config.vm.provision "dotnetcore", type: "shell" do |s|
+  s.inline = 'write-host "================ Installing DotNetCore-SDK ================" ; choco install dotnetcore-sdk -y'
+  end
 
   config.vm.provision "restart", type: "shell" do |s|
   s.inline = 'write-host "================ Restart Computer ================" ; restart-computer -force'
