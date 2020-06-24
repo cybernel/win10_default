@@ -18,6 +18,6 @@ Download the file "MSEdge.Win10.Vagrant.zip"
 unzip the file to reveal .box image "MSEdge - Win10.box". The .box file is an archive, do not unpack it.
 
 Run the following command to add the .box image to your Vagrant repo
-vagrant box add "./MSEdge - Win10.box" --name Win10
+vagrant box add "./MSEdge - Win10.box" --name Win10 --provider virtualbox
 
 run "vagrant up" to launch
