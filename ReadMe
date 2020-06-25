@@ -2,7 +2,9 @@ ReadMe
 
 This vagrantfile assumes you have downloaded/installed:
 - Vagrant, at least v2 or higher
-- Vagrant reload-plugin is installed "vagrant plugin install vagrant-reload"
+- Vagrant plugin's:
+    - reload-plugin is installed "vagrant plugin install vagrant-reload" (Helps with reboots)
+    - Virtualbox Guest editions installer "vagrant plugin install vagrant-vbguest" (Helps auto install VirtualBox vmtools)
 - VirtualBox
 
 This Vagrantfile makes use of the 90-day eval image from this URL
