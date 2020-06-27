@@ -77,8 +77,11 @@ Vagrant.configure("2") do |config|
   s.inline = 'write-host "================ Disable UAC ================" ; 
               New-ItemProperty -Path HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\policies\\system -Name EnableLUA -PropertyType DWord -Value 0 -Force '
   end
+  
+ ##config.vm.provision :reload
 
-  config.vm.provision :reload
-
+ config.vm.provision "stop", type: "shell" do |s|
+  s.inline = 'write-host "================ Stopping ================" ;   Stop-Computer -ComputerName localhost -Force'
+  end
 
 end
