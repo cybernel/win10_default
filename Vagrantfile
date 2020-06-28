@@ -52,6 +52,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "7zip", type: "shell" do |s|
   s.inline = 'write-host "================ Installing 7zip ================" ; choco install 7zip -y'
   end
+  
+  config.vm.provision "sublimetext3", type: "shell" do |s|
+  s.inline = 'write-host "================ Installing Sublimetext3 ================" ; choco install sublimetext3 -y'
+  end
 
   config.vm.provision "wireshark", type: "shell" do |s|
   s.inline = 'write-host "================ Installing wireshark ================" ; choco install wireshark -y'
@@ -77,7 +81,18 @@ Vagrant.configure("2") do |config|
   s.inline = 'write-host "================ Disable UAC ================" ; 
               New-ItemProperty -Path HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\policies\\system -Name EnableLUA -PropertyType DWord -Value 0 -Force '
   end
-  
+ 
+ config.vm.provision "winupdate", type: "shell" do |s|
+  s.inline = 'write-host "================ WinUpdate ================" ; 
+              Install-PackageProvider -Name NuGet -Force ; 
+              Install-Module PSWindowsUpdate -Force ;
+              Add-WUServiceManager -ServiceID 7971f918-a847-4430-9279-4a52d1efe18d -confirm:$false'
+  end  
+ 
+ ## Use this command to start Windows Updates
+ ##Get-WUInstall –MicrosoftUpdate –AcceptAll –AutoReboot
+ 
+ ##User this command to restart VM during vagrant provisioning
  ##config.vm.provision :reload
 
  config.vm.provision "stop", type: "shell" do |s|
