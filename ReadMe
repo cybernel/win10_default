@@ -20,11 +20,13 @@ This Vagrantfile will configure, download and install the following:
 - FireFox
 - Putty
 - 7Zip
+- Sublimetext3 text editor
 - Wireshark
 - PSTools
 - DotNetCore
 - Enables Autologon
 - Disables UAC
+- Automate Windows Updates Manually
 - Stop the VM after first provision
 
 run "vagrant up" to launch
