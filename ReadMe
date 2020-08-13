@@ -31,3 +31,18 @@ This Vagrantfile will configure, download and install the following:
 
 run "vagrant up" to launch
 
+FAQ
+
+Q. Why am I getting this error message when running 'vagrant up'?  "Error: SSL certificate problem: unable to get local issuer certificate"
+A. Your internet access is likely proxied. You need to specifiy the Root certificate of your proxy as specified above.
+
+Q. My internet access is being proxied transparently. Can I just ignore the certificate warning?
+A. Yes.  Just add the vagrant box manually with this command "vagrant box add --insecure cybernel/MSEdgeWin10" 
+Thhen run vagrant up
+
+Q. I want to acknowledge my PKI. How can I specify the root certificate being used by my proxy?
+A. 
+
+Q. How do I reference an explicit proxy?
+A.
+
