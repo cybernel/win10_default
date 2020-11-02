@@ -3,15 +3,16 @@ ReadMe
 This vagrantfile assumes you have downloaded/installed:
 - Vagrant, at least v2 or higher
 - Vagrant plugin's:
-    - reload-plugin is installed "vagrant plugin install vagrant-reload" (Helps with reboots)
-    - Virtualbox Guest editions installer "vagrant plugin install vagrant-vbguest" (Helps auto install VirtualBox vmtools)
-- VirtualBox
+    - reload-plugin is installed (helps with reboots) after Vagrant is installed run this command: 
+        "vagrant plugin install vagrant-reload" 
+    - Virtualbox Guest editions installer (Helps auto install VirtualBox vmtools) after Vagrant is installed run this command: 
+        "vagrant plugin install vagrant-vbguest" 
+- VirtualBox v6.1 (https://www.virtualbox.org/wiki/Downloads)
+- VirtualBox Extension Pack (Install this after VirtualBox is installed)
 
-This Vagrantfile makes use of the 90-day eval image from this URL
-https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
-
-The image has be packaged and deployed @ https://app.vagrantup.com/cybernel/boxes/MSEdgeWin10/
-It's 6.7GB, On first 'vagrant up' the image will be downloaded and added to your box repo for future use.
+This Vagrantfile makes use of the 90-day eval image from this URL https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+This image has be packaged (To help with automation and the vagrant archive format) and deployed @ https://app.vagrantup.com/cybernel/boxes/MSEdgeWin10/
+It's 6.7GB, On first 'vagrant up' the image will be downloaded and added to your box repo for future use. (this may take a while)
 
 This Vagrantfile will configure, download and install the following:
 - Choclatey package manager
@@ -38,7 +39,7 @@ A. Your internet access is likely proxied. You need to specifiy the Root certifi
 
 Q. My internet access is being proxied transparently. Can I just ignore the certificate warning?
 A. Yes.  Just add the vagrant box manually with this command "vagrant box add --insecure cybernel/MSEdgeWin10" 
-Thhen run vagrant up
+Then run vagrant up
 
 Q. I want to acknowledge my PKI. How can I specify the root certificate being used by my proxy?
 A. 
